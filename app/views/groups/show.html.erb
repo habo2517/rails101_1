@@ -23,7 +23,8 @@
    <tbody>
      <% @posts.each do |post| %>
        <tr>
-         <td><%= post.content %></td>
+         <!-- <td><%= post.content %></td> -->
+         <td> <%= simple_format(post.content) %> </td>
          <td>
           <% if post.editable_by?(current_user) %>
 
